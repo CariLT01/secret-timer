@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don't die</title>
+    <style>
+        button {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        p {
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+    </style>
+</head>
+<body>
+    <p id="p">Timer of doom</p>
+    <button onclick="window.pywebview.api.onButtonPress()">Click here</button>
+    <script>
+        function updateTimerOfDoom(text) {
+            document.querySelector("#p").textContent = text
+        }
+    </script>
+</body>
+</html>
